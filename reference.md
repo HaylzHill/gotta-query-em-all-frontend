@@ -1,0 +1,1 @@
+- https://codesandbox.io/s/vue-fetch-http-get-request-examples-rzuqn?file=/app/GetRequest.vue
