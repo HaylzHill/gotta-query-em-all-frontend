@@ -1,31 +1,23 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
-  <Pokemons />
+  <Suspense>
+    <template #default>
+      <Pokemons />
+    </template>
+    <template #fallback>
+      <Loading />
+    </template>
+  </Suspense>
 </template>
 
 <script>
 import Pokemons from "./Pokemons.vue";
+import Loading from "./Loading.vue";
 
 export default {
   name: "HelloWorld",
-  props: {
-    msg: {
-      type: String,
-      default: ""
-    }
-  },
   components: {
-    Pokemons
+    Loading,
+    Pokemons,
   },
-  data() {
-    return {
-      count: 0
-    };
-  }
 };
 </script>
