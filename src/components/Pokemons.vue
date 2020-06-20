@@ -1,4 +1,4 @@
-<template>
+~<template>
   <div id="wrapper">
     <Pokemon
       v-for="pokemon in allPokemon"
@@ -29,8 +29,14 @@ export default {
 </script>
 
 <style scoped>
-#wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>>
+  #wrapper {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    margin: 80px auto 0;
+    max-width: 1200px;
+    row-gap: 70px;
+  }
+</style>
