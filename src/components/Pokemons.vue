@@ -35,7 +35,7 @@ export default {
     grid-template-columns: repeat(auto-fit, 200px);
     grid-gap: 20px;
     justify-content: space-evenly;
-    margin: 80px auto 0;
+    margin: 80px auto 15vh;
     max-width: 1200px;
     row-gap: 70px;
   }
