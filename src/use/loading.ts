@@ -2,7 +2,6 @@ import {
   onMounted,
   onUnmounted,
   ref,
-  watch,
 } from 'vue'
 
 const useLoading = () => {

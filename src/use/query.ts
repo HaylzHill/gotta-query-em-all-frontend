@@ -11,7 +11,7 @@ const useQuery = async (query: string) => {
     const response = await fetch(uri, options);
     const { data } = await response.json();
 
-    // buffer fetch to at least 3 seconds
+    // buffer fetch to at least 5 seconds
     await buffer;
 
     return data ?? {}
