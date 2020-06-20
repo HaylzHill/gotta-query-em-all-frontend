@@ -1,4 +1,4 @@
-~<template>
+<template>
   <div id="wrapper">
     <Pokemon
       v-for="pokemon in allPokemon"
