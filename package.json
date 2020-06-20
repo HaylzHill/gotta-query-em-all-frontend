@@ -7,10 +7,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "apollo-link": "^1.2.14",
-    "apollo-link-http": "^1.5.17",
-    "graphql": "^15.1.0",
-    "graphql-tag": "^2.10.3",
     "nes.css": "^2.3.0",
     "vue": "^3.0.0-beta.15"
   },
