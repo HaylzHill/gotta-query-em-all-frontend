@@ -1,21 +1,21 @@
 <template>
-  <div class="nes-container with-title nice-width">
+  <div class="nes-container with-title loading-container">
+    <p class="title">
+      Loading...
+    </p>
     <img
-      src="../assets/pikachu-walking.gif"
       alt="Pikachu walking"
+      class="pika"
       height="50"
+      src="../assets/pikachu-walking.gif"
+      width="50"
     >
-    <div>
-      <p class="title">
-        Loading...
-      </p>
-      <p>{{ msg }}</p>
-      <progress
-        class="nes-progress is-primary"
-        max="100"
-        :value="percentage"
-      />
-    </div>
+    <p>{{ msg }}</p>
+    <progress
+      class="nes-progress is-primary"
+      max="100"
+      :value="percentage"
+    />
   </div>
 </template>
 
@@ -51,8 +51,13 @@ export default {
 </script>
 
 <style scoped>
-.nice-width {
-  margin: auto;
+.loading-container {
+  margin: 5vh auto 0;
   max-width: 500px;
+  text-align: center;
+}
+
+.pika {
+  margin: 1rem 0 2.5rem;
 }
 </style>
