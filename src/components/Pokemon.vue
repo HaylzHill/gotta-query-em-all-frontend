@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pokemon">
     <p>{{ pokemon.name }}</p>
     <img :src="pokemon.imgSrc">
   </div>
@@ -18,3 +18,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .pokemon img {
+    width: 100%;
+  }
+  .pokemon:hover {
+    transition: 0.1s ease transform;
+    transform: scale(1.05);
+  }
+</style>
