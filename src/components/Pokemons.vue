@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <Pokemon
+    <PokemonThumbnail
       v-for="pokemon in allPokemon"
       :key="pokemon.id"
       :pokemon="pokemon"
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Pokemon from "./Pokemon.vue";
+import PokemonThumbnail from "./PokemonThumbnail.vue";
 import useQuery from "../use/query";
 
 export default {
   name: "Pokemons",
   components: {
-    Pokemon
+    PokemonThumbnail
   },
   props: {},
   async setup() {

@@ -1,7 +1,8 @@
 <template>
   <Suspense>
     <template #default>
-      <Pokemons />
+      <h1>{{ $route.params.name }}'s profile</h1>
+      <Pokemon :pokemon-name="`${$route.params.name}`" />
     </template>
     <template #fallback>
       <Loading />
@@ -10,14 +11,16 @@
 </template>
 
 <script>
-import Pokemons from "./Pokemons.vue";
-import Loading from "./Loading.vue";
+import Pokemon from "../components/Pokemon.vue";
+import Loading from "../components/Loading.vue";
+
 
 export default {
   name: "HelloWorld",
   components: {
     Loading,
-    Pokemons,
+    Pokemon,
   },
 };
+
 </script>
