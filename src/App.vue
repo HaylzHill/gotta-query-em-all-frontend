@@ -1,19 +1,18 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-    height="70"
-  >
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <router-link to="/">
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+      height="70"
+    >
+  </router-link>
+
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
-  components: {
-    HelloWorld
-  }
 };
 </script>
