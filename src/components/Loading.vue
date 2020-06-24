@@ -1,8 +1,15 @@
 <template>
-  <div class="nes-container with-title nice-width">
+  <div class="nes-container with-title loading-container">
     <p class="title">
       Loading...
     </p>
+    <img
+      alt="Pikachu walking"
+      class="pika"
+      height="50"
+      src="../assets/pikachu-walking.gif"
+      width="50"
+    >
     <p>{{ msg }}</p>
     <progress
       class="nes-progress is-primary"
@@ -14,7 +21,7 @@
 
 <script>
 import { ref, watchEffect } from "vue";
-import useLoading from '../use/loading';
+import useLoading from "../use/loading";
 
 const funMessage = (percentage) => {
   if (percentage.value < 30) {
@@ -25,7 +32,7 @@ const funMessage = (percentage) => {
     return "Receiving Pokemon data...";
   }
 
-  return"Sending to Pokedex...";
+  return "Sending to Pokedex...";
 };
 
 export default {
@@ -35,17 +42,22 @@ export default {
     const { percentage } = useLoading();
 
     watchEffect(() => {
-      msg.value = funMessage(percentage)
+      msg.value = funMessage(percentage);
     });
 
     return { msg, percentage };
-  }
+  },
 };
 </script>
 
 <style scoped>
-  .nice-width {
-    margin: auto;
-    max-width: 500px;
-  }
+.loading-container {
+  margin: 5vh auto 0;
+  max-width: 500px;
+  text-align: center;
+}
+
+.pika {
+  margin: 1rem 0 2.5rem;
+}
 </style>
