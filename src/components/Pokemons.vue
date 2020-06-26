@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div class="wrapper">
     <Pokemon
       v-for="pokemon in allPokemon"
       :key="pokemon.id"
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-  #wrapper {
+  .wrapper {
     display: grid;
     grid-gap: 70px 20px;
     grid-template-columns: repeat(auto-fit, 200px);
