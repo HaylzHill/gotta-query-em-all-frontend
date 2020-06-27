@@ -5,8 +5,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "Pokemon",
   props: {
     pokemon: {
@@ -16,7 +18,7 @@ export default {
       default: null
     }
   }
-};
+});
 </script>
 
 <style scoped>

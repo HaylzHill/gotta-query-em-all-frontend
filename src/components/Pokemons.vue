@@ -8,24 +8,22 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import Pokemon from "./Pokemon.vue";
-import useQuery from "../use/query";
+import pokemons from "../use/queries/pokemons";
 
-export default {
+export default defineComponent({
   name: "Pokemons",
   components: {
     Pokemon
   },
   props: {},
   async setup() {
-    const {
-      pokemon: allPokemon = [],
-    } = await useQuery(`{ pokemon { name imgSrc } }`);
-
+    const allPokemon = await pokemons();
     return { allPokemon };
   },
-};
+});
 </script>
 
 <style scoped>

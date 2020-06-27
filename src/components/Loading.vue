@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { ref, watchEffect } from "vue";
+import { defineComponent ,ref, watchEffect } from "vue";
 import useLoading from "../use/loading";
 
 const funMessage = (percentage) => {
@@ -35,7 +35,7 @@ const funMessage = (percentage) => {
   return "Sending to Pokedex...";
 };
 
-export default {
+export default defineComponent({
   name: "Loading",
   setup() {
     const msg = ref("");
@@ -47,7 +47,7 @@ export default {
 
     return { msg, percentage };
   },
-};
+});
 </script>
 
 <style scoped>

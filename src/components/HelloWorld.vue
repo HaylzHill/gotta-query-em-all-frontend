@@ -10,14 +10,15 @@
 </template>
 
 <script>
+import { defineComponent } from "vue";
 import Pokemons from "./Pokemons.vue";
 import Loading from "./Loading.vue";
 
-export default {
+export default defineComponent({
   name: "HelloWorld",
   components: {
     Loading,
     Pokemons,
   },
-};
+});
 </script>
