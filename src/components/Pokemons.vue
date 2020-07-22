@@ -27,14 +27,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-  .wrapper {
-    display: grid;
-    grid-gap: 70px 20px;
-    grid-template-columns: repeat(auto-fit, 200px);
-    justify-content: space-evenly;
-    margin: 80px auto 15vh;
-    max-width: 1200px;
-  }
-</style>
