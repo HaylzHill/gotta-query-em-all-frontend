@@ -1,5 +1,5 @@
 const useQuery = async (query: string) => {
-  const uri = process.env.GQL_URI;
+  const uri = import.meta.env.VITE_GQL_URI;
   const options = {
     body: JSON.stringify({ query }),
     headers: { 'Content-Type': 'application/json' },
